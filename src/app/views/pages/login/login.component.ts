@@ -31,7 +31,7 @@ export class LoginComponent {
     if (this.loginForm.invalid) {
       return;
     }
-    else if(this.loginForm.value.email == 'admin@admin.com' && this.loginForm.value.password == '1234546789') {
+    // else if(this.loginForm.value.email == 'admin@admin.com' && this.loginForm.value.password == '1234546789') {
       const payLoad = {
         email: this.loginForm.value.email,
         password: this.loginForm.value.password,
@@ -41,9 +41,9 @@ export class LoginComponent {
       this.tokenService.handle(token);
       this.tokenService.sendUserData(JSON.stringify(payLoad));
       this.router.navigate(['/dashboard']);
-    } else {
-      this.invalidCredMessage = 'Wrong Credentials';
-    }
+    // } else {
+      // this.invalidCredMessage = 'Wrong Credentials';
+    // }
   }
 
 }
